@@ -3,6 +3,7 @@ package ru.job4j.inheritance;
 public class Doctor extends Profession{
 
     private int qualification;
+
     Diagnosis astma = new Diagnosis("Астма");
 
     public Doctor(String name, String surname, String education, String birthday, int qualification) {

@@ -1,6 +1,7 @@
 package ru.job4j.inheritance;
 
 public class Pacient {
+
     private String name;
     private String surname;
 
@@ -12,6 +13,7 @@ public class Pacient {
     public String getName() {
         return name;
     }
+
     public String getSurname() {
         return surname;
     }

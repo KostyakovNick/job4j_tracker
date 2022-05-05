@@ -8,9 +8,6 @@ public class Surgeon extends Doctor{
         super(name, surname, education, birthday, qualification);
         this.specializations = specializations;
     }
-    /*public Surgeon(String specializations) {
-        this.specializations = specializations;
-    }*/
 
     public String getSpecializations() {
         return specializations;
