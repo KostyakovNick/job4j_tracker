@@ -67,7 +67,7 @@ public class Profession {
                 "higher education",
                 "12.08.2000",
                 3);
-        Pacient pacient = new Pacient("Micky","Mouse");
+        Pacient pacient = new Pacient("Micky", "Mouse");
         System.out.println("Программист:  " + programmer.getName() + " " + programmer.getSurname() + ", " + programmer.getBirthday());
         System.out.println("Grade: " + programmer.getGrade() + ", Programming language: " + programmer.getLanguage());
         System.out.println();
