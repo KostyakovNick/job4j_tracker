@@ -2,14 +2,19 @@ package ru.job4j.inheritance;
 
 public class Doctor extends Profession{
 
-    private String diagnosis;
-    private String pacient;
+    private int qualification;
+    Diagnosis astma = new Diagnosis("Астма");
 
-    public Doctor(String name, String surname, String education, String birthday) {
+    public Doctor(String name, String surname, String education, String birthday, int qualification) {
         super(name, surname, education, birthday);
+        this.qualification = qualification;
     }
 
-    public String diagnosisHeal(Programmer programmer) {
-        return "The patient is healthy";
+    public int getQualification() {
+        return qualification;
+    }
+
+    public Diagnosis heal(Pacient pacient) {
+        return astma;
     }
 }
