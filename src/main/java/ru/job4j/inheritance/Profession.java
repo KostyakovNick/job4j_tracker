@@ -2,7 +2,7 @@ package ru.job4j.inheritance;
 
 import java.util.Calendar;
 
-public class Profession {
+public class Profession{
 
     private String name;
     private String surname;
