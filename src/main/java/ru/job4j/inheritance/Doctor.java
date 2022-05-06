@@ -4,8 +4,6 @@ public class Doctor extends Profession {
 
     private int qualification;
 
-    Diagnosis astma = new Diagnosis("Астма");
-
     public Doctor(String name, String surname, String education, String birthday, int qualification) {
         super(name, surname, education, birthday);
         this.qualification = qualification;
@@ -16,6 +14,7 @@ public class Doctor extends Profession {
     }
 
     public Diagnosis heal(Pacient pacient) {
+        Diagnosis astma = new Diagnosis("Астма");
         return astma;
     }
 }
