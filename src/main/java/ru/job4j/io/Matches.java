@@ -15,10 +15,10 @@ public class Matches {
             if (matches > 0 && matches <= 3 && matches <= count) {
                 count -= matches;
                 System.out.println(count);
+                turn = !turn;
             } else {
                 System.out.println("Ошибка!");
             }
-            turn = !turn;
         }
         if (!turn) {
             System.out.println("Выиграл первый игрок");
