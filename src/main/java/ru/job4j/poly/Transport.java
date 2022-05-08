@@ -5,5 +5,5 @@ public interface Transport {
 
     void passengers(int amount);
 
-    int refuel(int price);
+    int refuel(int fuel);
 }
