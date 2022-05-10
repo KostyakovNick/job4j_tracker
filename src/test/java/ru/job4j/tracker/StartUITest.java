@@ -8,15 +8,18 @@ import static org.hamcrest.core.IsNull.nullValue;
 public class StartUITest {
     @Test
     public void whenCreateItem() {
+
         Input in = new StubInput(
                 new String[] {"0", "Item name", "1"}
         );
         Tracker tracker = new Tracker();
+        Output output = new ConsoleOutput();
         UserAction[] actions = {
-                new CreateAction(),
+                new CreateAction(output),
                 new Exit()
         };
-        new StartUI().init(in, tracker, actions);
+
+        new StartUI(output).init(in, tracker, actions);
         assertThat(tracker.findAll()[0].getName(), is("Item name"));
     }
 
@@ -28,11 +31,12 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", String.valueOf(item.getId()), "New item name", "1"}
         );
+        Output output = new ConsoleOutput();
         UserAction[] actions = {
-                new ReplaceAction(),
+                new ReplaceAction(output),
                 new Exit()
         };
-        new StartUI().init(in, tracker, actions);
+        new StartUI(output).init(in, tracker, actions);
         assertThat(tracker.findById(item.getId()).getName(), is(replacedName));
     }
 
@@ -43,11 +47,12 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", String.valueOf(item.getId()), "1"}
         );
+        Output output = new ConsoleOutput();
         UserAction[] actions = {
-                new DeleteAction(),
+                new DeleteAction(output),
                 new Exit()
         };
-        new StartUI().init(in, tracker, actions);
+        new StartUI(output).init(in, tracker, actions);
         assertThat(tracker.findById(item.getId()), is(nullValue()));
     }
 }
