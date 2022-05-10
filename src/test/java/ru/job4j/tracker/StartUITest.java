@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 import static org.hamcrest.core.IsNull.nullValue;
 
 public class StartUITest {
-   /* @Test
+    @Test
     public void whenCreateItem() {
         Input in = new StubInput(
                 new String[] {"0", "Item name", "1"}
@@ -26,7 +26,7 @@ public class StartUITest {
         Item item = tracker.add(new Item("Replaced item"));
         String replacedName = "New item name";
         Input in = new StubInput(
-                new String[] {"0", "1", "New item name", "1"}
+                new String[] {"0", String.valueOf(item.getId()), replacedName, "1"}
         );
         UserAction[] actions = {
                 new ReplaceAction(),
@@ -41,7 +41,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Deleted item"));
         Input in = new StubInput(
-                new String[] {"0", "1", "1"}
+                new String[] {"0", String.valueOf(item.getId()), "1"}
         );
         UserAction[] actions = {
                 new DeleteAction(),
@@ -49,5 +49,5 @@ public class StartUITest {
         };
         new StartUI().init(in, tracker, actions);
         assertThat(tracker.findById(item.getId()), is(nullValue()));
-    }*/
+    }
 }
