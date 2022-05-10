@@ -6,5 +6,4 @@ import static org.junit.Assert.*;
 import static org.hamcrest.core.IsNull.nullValue;
 
 public class StartUITest {
-
 }
