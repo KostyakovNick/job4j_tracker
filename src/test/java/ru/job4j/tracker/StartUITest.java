@@ -23,7 +23,7 @@ public class StartUITest {
         };
 
         new StartUI(output).init(in, tracker, actions);
-        assertThat(tracker.findAll()[0].getName(), is("Item name"));
+        assertThat(tracker.findAll().get(0).getName(), is("Item name"));
     }
 
     @Test
@@ -92,7 +92,7 @@ public class StartUITest {
         Output out = new StubOutput();
         Tracker tracker = new Tracker();
         Item one = tracker.add(new Item("test1"));
-                Input in = new StubInput(
+        Input in = new StubInput(
                 new String[] {"0", "1"}
         );
         UserAction[] actions = new UserAction[]{
