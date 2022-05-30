@@ -20,7 +20,7 @@ public class Tracker {
     }
 
     public List<Item> findAll() {
-        return items;
+        return List.copyOf(items);
     }
 
     public List<Item> findByName(String key) {
@@ -58,7 +58,7 @@ public class Tracker {
         int index = indexOf(id);
         boolean rsl = index != -1;
         if (rsl) {
-            items.remove(id - 1);
+            items.remove(index);
         }
         return rsl;
     }
