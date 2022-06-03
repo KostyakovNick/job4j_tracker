@@ -18,6 +18,7 @@ public class BankService {
             List<Account> rsl = users.get(user);
             if (!rsl.contains(account)) {
                 rsl.add(account);
+                users.put(findByPassport(passport), rsl);
             }
         }
     }
