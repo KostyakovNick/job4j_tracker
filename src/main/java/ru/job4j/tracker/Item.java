@@ -56,12 +56,7 @@ public class Item {
 
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + id;
-        result = prime * result + (name != null ? name.hashCode() : 0);
-        result = prime * result + (created != null ? created.hashCode() : 0);
-        return result;
+        return name.hashCode();
     }
 
     @Override
@@ -77,7 +72,7 @@ public class Item {
         }
         Item other = (Item) obj;
         return id == other.id
-                && (name == other.name || (name != null && name.equals(other.getName())))
-                && (created == other.created || (created != null && created.equals(getCreated())));
+                && (name == other.name || (name.equals(other.name))
+                && (created == other.created || (created.equals(other.created))));
     }
 }
