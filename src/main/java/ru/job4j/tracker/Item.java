@@ -53,4 +53,31 @@ public class Item {
                 + ", created=" + created.format(FORMATTER)
                 + '}';
     }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + id;
+        result = prime * result + (name != null ? name.hashCode() : 0);
+        result = prime * result + (created != null ? created.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        Item other = (Item) obj;
+        return id == other.id
+                && (name == other.name || (name != null && name.equals(other.getName())))
+                && (created == other.created || (created != null && created.equals(getCreated())));
+    }
 }
