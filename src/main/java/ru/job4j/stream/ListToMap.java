@@ -15,6 +15,4 @@ public class ListToMap {
                                 (existing, replacement) -> existing
                         ));
     }
-
-
 }
