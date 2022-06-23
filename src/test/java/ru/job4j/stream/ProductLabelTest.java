@@ -20,7 +20,6 @@ public class ProductLabelTest {
                 new Product("Sausage", 500, new GregorianCalendar(2022, Calendar.JULY, 26)),
                 new Product("Milk", 100, new GregorianCalendar(2022, Calendar.JUNE, 24))
         );
-        //List<String> rsl = ProductLabel.generateLabels(products);
         List<String> expected = List.of(
                 "------------------\nBread\nOld price: 50.0\nNew price: 45.0\n------------------",
                 "------------------\nMilk\nOld price: 100.0\nNew price: 90.0\n------------------"
