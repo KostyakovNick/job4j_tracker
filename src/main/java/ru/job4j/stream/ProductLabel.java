@@ -14,11 +14,11 @@ public class ProductLabel {
                         )
                         <= 172800000)
                 )
-                .map(s -> "------------------\n"
-                        + s.getName()
-                        + "\nOld price: " + s.getPrice()
-                        + "\nNew price: " + (s.getPrice() * 0.9)
-                        + "\n------------------")
+                .map(s -> "------------------" + System.lineSeparator()
+                        + s.getName() + System.lineSeparator()
+                        + "Old price: " + s.getPrice() + System.lineSeparator()
+                        + "New price: " + (s.getPrice() * 0.9) + System.lineSeparator()
+                        + "------------------")
                 .collect(Collectors.toList());
     }
 }

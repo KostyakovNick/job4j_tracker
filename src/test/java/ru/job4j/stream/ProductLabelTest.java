@@ -21,8 +21,16 @@ public class ProductLabelTest {
                 new Product("Milk", 100, new GregorianCalendar(2022, Calendar.JUNE, 24))
         );
         List<String> expected = List.of(
-                "------------------\nBread\nOld price: 50.0\nNew price: 45.0\n------------------",
-                "------------------\nMilk\nOld price: 100.0\nNew price: 90.0\n------------------"
+                "------------------"  + System.lineSeparator()
+                        + "Bread"  + System.lineSeparator()
+                        + "Old price: 50.0"  + System.lineSeparator()
+                        + "New price: 45.0"  + System.lineSeparator()
+                        + "------------------",
+                "------------------"  + System.lineSeparator()
+                        + "Milk"+ System.lineSeparator()
+                        + "Old price: 100.0" + System.lineSeparator()
+                        + "New price: 90.0" + System.lineSeparator()
+                        + "------------------"
         );
         assertThat(ProductLabel.generateLabels(products), is(expected));
     }
