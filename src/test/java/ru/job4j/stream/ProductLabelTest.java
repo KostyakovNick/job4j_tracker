@@ -27,7 +27,7 @@ public class ProductLabelTest {
                         + "New price: 45.0"  + System.lineSeparator()
                         + "------------------",
                 "------------------"  + System.lineSeparator()
-                        + "Milk"+ System.lineSeparator()
+                        + "Milk" + System.lineSeparator()
                         + "Old price: 100.0" + System.lineSeparator()
                         + "New price: 90.0" + System.lineSeparator()
                         + "------------------"
