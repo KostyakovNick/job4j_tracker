@@ -77,7 +77,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Brand: " + brand + System.lineSeparator()
+        return "Brand: " + brand+ System.lineSeparator()
                 + "Model: " + model + System.lineSeparator()
                 + "Created: " + created + System.lineSeparator()
                 + "Volume: " + volume + System.lineSeparator()
