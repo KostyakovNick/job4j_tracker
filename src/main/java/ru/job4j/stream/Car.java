@@ -77,11 +77,10 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Brand: " + brand
-                + "\nModel: " + model
-                + "\nCreated: " + created
-                + "\nVolume: " + volume
-                + "\nColor: " + color
-                + "\n";
+        return "Brand: " + brand + System.lineSeparator()
+                + "Model: " + model + System.lineSeparator()
+                + "Created: " + created + System.lineSeparator()
+                + "Volume: " + volume + System.lineSeparator()
+                + "Color: " + color + System.lineSeparator();
     }
 }
