@@ -59,5 +59,6 @@ public class Analyze {
                 .map(tuple -> new Tuple(tuple.getKey(), tuple.getValue()))
                 .max(Comparator.comparingDouble(s -> s.getScore()))
                 .orElse(null);
+
     }
 }
