@@ -15,7 +15,7 @@ public class ProductLabelTest {
     @Test
     public void generateLabels() {
         List<Product> products = List.of(
-                new Product("Cheese", 300, new GregorianCalendar(2022, Calendar.JUNE, 30)),
+                new Product("Cheese", 300, new GregorianCalendar(2022, Calendar.JULY, 30)),
                 new Product("Bread", 50, new GregorianCalendar(2022, Calendar.JUNE, 25)),
                 new Product("Sausage", 500, new GregorianCalendar(2022, Calendar.JULY, 26)),
                 new Product("Milk", 100, new GregorianCalendar(2022, Calendar.JUNE, 24))
